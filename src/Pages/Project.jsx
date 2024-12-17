@@ -1,9 +1,8 @@
 
 import React from "react";
 import styled from "styled-components";
-
 const PortfolioSection = styled.section`
-  padding: 20px 20px 40px;
+  padding: 20px;
   text-align: center;
   margin-top: 60px;
 
@@ -14,6 +13,14 @@ const PortfolioSection = styled.section`
     span {
       color: white;
     }
+
+    @media (max-width: 768px) {
+      font-size: 1.8em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5em;
+    }
   }
 `;
 
@@ -21,6 +28,14 @@ const PortfolioGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const PortfolioItem = styled.div`
@@ -37,11 +52,27 @@ const PortfolioItem = styled.div`
   h3 {
     margin-top: 0;
     font-size: 1.5em;
+
+    @media (max-width: 768px) {
+      font-size: 1.3em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.2em;
+    }
   }
 
   p {
     font-size: 1em;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.8em;
+    }
   }
 
   a {
@@ -56,8 +87,76 @@ const PortfolioItem = styled.div`
     &:hover {
       background-color: #0056b3;
     }
+
+    @media (max-width: 768px) {
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 480px) {
+      padding: 6px 12px;
+      font-size: 0.8em;
+    }
   }
 `;
+
+
+// const PortfolioSection = styled.section`
+//   padding: 20px 20px 40px;
+//   text-align: center;
+//   margin-top: 60px;
+
+//   h2 {
+//     font-size: 2em;
+//     margin-bottom: 40px;
+
+//     span {
+//       color: white;
+//     }
+//   }
+// `;
+
+// const PortfolioGrid = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   gap: 20px;
+// `;
+
+// const PortfolioItem = styled.div`
+//   background: linear-gradient(145deg, #007bff8c, #0bb1e8);
+//   padding: 20px;
+//   border-radius: 10px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+//   transition: transform 0.3s ease;
+
+//   &:hover {
+//     transform: translateY(-10px);
+//   }
+
+//   h3 {
+//     margin-top: 0;
+//     font-size: 1.5em;
+//   }
+
+//   p {
+//     font-size: 1em;
+//     margin-bottom: 20px;
+//   }
+
+//   a {
+//     color: #fff;
+//     text-decoration: none;
+//     background-color: #007bff;
+//     padding: 10px 20px;
+//     border-radius: 5px;
+//     display: inline-block;
+//     transition: background-color 0.3s ease;
+
+//     &:hover {
+//       background-color: #0056b3;
+//     }
+//   }
+// `;
 
 const Projects = () => {
   return (
@@ -93,7 +192,8 @@ const Projects = () => {
               href="https://jokes-project.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-            >              <i className="bx bx-link-external"></i>
+            >       
+             <i className="bx bx-link-external"></i>
             </a>
           </PortfolioItem>
           <PortfolioItem>

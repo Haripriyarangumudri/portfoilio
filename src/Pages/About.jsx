@@ -3,7 +3,6 @@
 import React from "react";
 import styled from "styled-components";
 import profileImg from "../assets/hari.jpg";
-
 // Styled Components
 const ProfileSection = styled.section`
   display: flex;
@@ -11,7 +10,13 @@ const ProfileSection = styled.section`
   align-items: center; /* Vertically center the content */
   height: calc(100vh - 80px);
   padding: 40px;
-  margin-top: 80px; /* Add margin to avoid overlapping with the header */
+  margin-top: 80px;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    height: auto;
+    flex-direction: column;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -23,6 +28,11 @@ const ContentWrapper = styled.div`
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 
 const Hexagon = styled.div`
@@ -39,6 +49,16 @@ const Hexagon = styled.div`
     height: 90%;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
+
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 180px;
+  }
+
+  @media (max-width: 480px) {
+    width: 200px;
+    height: 150px;
+  }
 `;
 
 const AboutContainer = styled.div`
@@ -50,6 +70,10 @@ const AboutContainer = styled.div`
     color: #00ffff;
     margin-bottom: 10px;
     text-align: left;
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
   }
 
   h3 {
@@ -57,6 +81,10 @@ const AboutContainer = styled.div`
     color: #ffffff;
     margin-bottom: 20px;
     text-align: left;
+
+    @media (max-width: 480px) {
+      font-size: 1.2rem;
+    }
   }
 
   p {
@@ -65,6 +93,10 @@ const AboutContainer = styled.div`
     margin-bottom: 20px;
     line-height: 1.6;
     text-align: justify;
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
   }
 
   button {
@@ -83,8 +115,95 @@ const AboutContainer = styled.div`
       border: 1px solid rgb(223, 235, 235);
       transform: scale(1.1);
     }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
   }
 `;
+
+// Styled Components
+// const ProfileSection = styled.section`
+//   display: flex;
+//   justify-content: center; /* Horizontally center the content */
+//   align-items: center; /* Vertically center the content */
+//   height: calc(100vh - 80px);
+//   padding: 40px;
+//   margin-top: 80px; /* Add margin to avoid overlapping with the header */
+// `;
+
+// const ContentWrapper = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: space-between;
+//   gap: 60px;
+//   width: 90%;
+//   max-width: 1000px;
+//   margin: 0 auto;
+// `;
+
+// const Hexagon = styled.div`
+//   width: 350px;
+//   height: 250px;
+//   background: rgb(221, 232, 232);
+//   clip-path: polygon(50% 2%, 98% 27%, 97% 75%, 50% 97%, 2% 73%, 2% 27%);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   img {
+//     width: 90%;
+//     height: 90%;
+//     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+//   }
+// `;
+
+// const AboutContainer = styled.div`
+//   max-width: 600px;
+//   padding: 20px;
+
+//   h2 {
+//     font-size: 2rem;
+//     color: #00ffff;
+//     margin-bottom: 10px;
+//     text-align: left;
+//   }
+
+//   h3 {
+//     font-size: 1.5rem;
+//     color: #ffffff;
+//     margin-bottom: 20px;
+//     text-align: left;
+//   }
+
+//   p {
+//     font-size: 1rem;
+//     color: #cccccc;
+//     margin-bottom: 20px;
+//     line-height: 1.6;
+//     text-align: justify;
+//   }
+
+//   button {
+//     background-color: #00ffff;
+//     color: #1c1c1c;
+//     border: none;
+//     padding: 10px 20px;
+//     border-radius: 25px;
+//     font-size: 16px;
+//     cursor: pointer;
+//     transition: background-color 0.3s, transform 0.3s;
+
+//     &:hover {
+//       background-color: #1c1c1c;
+//       color: #00ffff;
+//       border: 1px solid rgb(223, 235, 235);
+//       transform: scale(1.1);
+//     }
+//   }
+// `;
 
 // React Component
 const AboutMe = () => {

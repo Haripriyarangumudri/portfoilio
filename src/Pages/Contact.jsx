@@ -107,7 +107,6 @@ const Contact = () => {
           console.log("Email sent successfully:", response.status);
           setStatusMessage("Message sent successfully!");
 
-          // Clear input fields after sending the message
           setFormData({
             fullName: "",
             email: "",
@@ -128,7 +127,6 @@ const Contact = () => {
       <ContactSection>
         <h1>Contact <span>Me!</span></h1>
 
-        {/* Display the status message */}
         {statusMessage && (
           <StatusMessage success={statusMessage === "Message sent successfully!"}>
             {statusMessage}
